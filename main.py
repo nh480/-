@@ -32,9 +32,10 @@ nos = sphere(color = color.black, pos = vec(0,0,0.45), size = vec(0.07,0.07,0.07
 bear = compound([h, er, ea, erp, eap, ey, ee, nos])
 
 
+g = bear
 
 
-b = sphere(make_trail = True)
+b = sphere(make_trail = True, opacity = 0)
 
 
 
@@ -43,21 +44,28 @@ while True :
     rate(100)
     if scene.mouse.pick == dou :
         b.pos.y = b.pos.y + 0.1
+        g.pos.y = g.pos.y + 0.1
     if scene.mouse.pick == re :
         b.pos.y = b.pos.y + -0.1
+        g.pos.y = g.pos.y + -0.1
     if scene.mouse.pick == mi :
         b.pos.x = b.pos.x + -0.1
+        g.pos.x = g.pos.x + -0.1
     if scene.mouse.pick == fa :
         b.pos.x = b.pos.x + 0.1
+        g.pos.x = g.pos.x + 0.1
     
     if scene.mouse.pick == sol :
         b.pos.z = b.pos.z + 0.1 
+        g.pos.z = g.pos.z + 0.1
     if scene.mouse.pick == la :
         b.pos.z = b.pos.z + -0.1 
+        g.pos.z = g.pos.z + -0.1
 
 
     if scene.mouse.pick == si :
         b.pos.y = b.pos.y + 0.1 
+        g.pos.y = g.pos.y + 0.1
         b.make_trail = False
     else :
         b.make_trail = True
@@ -66,16 +74,28 @@ while True :
     if scene.mouse.pick == rep :
         b.pos.x = b.pos.x + -0.1 
         b.pos.y = b.pos.y + 0.1 
+        g.pos.x = g.pos.x + -0.1 
+        g.pos.y = g.pos.y + 0.1 
     if scene.mouse.pick == mip :        
         b.pos.x = b.pos.x + -0.1 
         b.pos.y = b.pos.y + -0.1
+        g.pos.x = g.pos.x + -0.1 
+        g.pos.y = g.pos.y + -0.1
     if scene.mouse.pick == solp :
         b.pos.x = b.pos.x + 0.1 
         b.pos.y = b.pos.y + 0.1 
+        g.pos.x = g.pos.x + 0.1 
+        g.pos.y = g.pos.y + 0.1
     if scene.mouse.pick == lap :
         b.pos.x = b.pos.x + 0.1 
         b.pos.y = b.pos.y + -0.1
+        g.pos.x = g.pos.x + 0.1 
+        g.pos.y = g.pos.y + -0.1
 
+
+    if scene.mouse.pick == sip :
+        b.pos = pos=vec(0, 0, 0)
+        g.pos = pos=vec(0, 0, 0)
 
     if scene.mouse.pick == sip :
         b.pos = pos=vec(0, 0, 0)
